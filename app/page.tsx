@@ -464,9 +464,7 @@ export default function PageContent() {
           </div>
         </div>
         <div className="contact_info">
-          <a 
-            href="mailto:stevenhsu@keio.jp"
-          >
+          <a href="mailto:stevenhsu@keio.jp">
             stevenhsu@keio.jp
           </a>
           <Link

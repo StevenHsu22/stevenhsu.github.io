@@ -213,7 +213,7 @@ p {
 
 .contact_info .nav-item {
   position: relative;  
-  top: 20;  
+  top: 20%;  
   left: -50%;
   display: inline-block;  
   vertical-align: middle; 
