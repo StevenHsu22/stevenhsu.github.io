@@ -19,6 +19,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: latest
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Restore cache
@@ -27,10 +31,6 @@ jobs:
           path: |
             .next/cache
           key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}
-      - name: Install pnpm
-        uses: pnpm/action-setup@v3
-        with:
-          version: latest
       - name: Install dependencies
         run: pnpm install
       - name: Build with Next.js
