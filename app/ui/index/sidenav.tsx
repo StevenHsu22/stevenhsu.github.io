@@ -1,67 +1,144 @@
 "use client";
 
-import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
-import { PowerIcon } from '@heroicons/react/24/outline';
+import { usePathname } from 'next/navigation';
+import { useState } from 'react';
 
 export default function SideNav() {
+  const pathname = usePathname();
+  const isAboutPage = pathname === '/about';
+  // const navClass = isAboutPage ? 'text-black' : 'text-white';
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const menuRef = useRef<HTMLDivElement | null>(null);
 
-  // 切换菜单状态
   const toggleMenu = () => {
-    setIsMenuOpen(prev => !prev);
+    setIsMenuOpen((prev) => !prev);
   };
 
-  // 点击外部区域关闭菜单
-  const handleClickOutside = (event: MouseEvent) => {
-    // 如果菜单打开且点击事件发生在菜单外部，关闭菜单
-    if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-      setIsMenuOpen(false);
-    }
+  const closeMenu = () => {
+    setIsMenuOpen(false);
   };
 
-  useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
+  const navClass = isMenuOpen ? 'text-white' : isAboutPage ? 'text-black' : 'text-white';
 
   return (
-    <nav className="flex w-full items-center justify-between py-4">
-      <Link className="text-white ml-4" href="/">
-        Steven Hsu
-      </Link>
+    <div>
+      <nav className={`flex items-center justify-between w-full h-full p-6 relative box-border ${navClass}`}>
+        <Link className="steven-hsu" href="./" onClick={closeMenu}>
+          Steven Hsu
+        </Link>
 
-      <div className="flex space-x-4 mr-4">
-        <Link className="text-white" href="#section1">
-          Section 1
-        </Link>
-        <Link className="text-white" href="#section2">
-          Section 2
-        </Link>
-        <Link className="text-white" href="#section3">
-          Section 3
-        </Link>
-      </div>
-
-      <div className="relative" ref={menuRef}> {/* 将 menuRef 添加到外部 div */}
-        <button 
-          className="text-white" 
+        <button
+          type="button"
+          className="header__button md:hidden"
           onClick={toggleMenu}
         >
-          Menu
+          <span className={`header__menu ${isMenuOpen ? 'hidden' : ''} ${navClass}`}>menu</span>
+          <span className={`header__close ${isMenuOpen ? '' : 'hidden'} ${navClass}`}>close</span>
         </button>
-        {isMenuOpen && (
-          <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-md">
-            <Link className="block px-4 py-2 text-black hover:bg-gray-200" href="/">Home</Link>
-            <Link className="block px-4 py-2 text-black hover:bg-gray-200" href="/about">About Me</Link>
-            <Link className="block px-4 py-2 text-black hover:bg-gray-200" href="/work">Work</Link>
-            <Link className="block px-4 py-2 text-black hover:bg-gray-200" href="/contact">Contact</Link>
-          </div>
-        )}
+
+        <nav className={`header__nav md:hidden ${isMenuOpen ? "open" : ""}`}>
+          <ol className="header__list">
+            <li className="header__item">
+              <Link href="./#home" className="header__link" onClick={closeMenu}>
+                <span className="header__text">Home</span>
+              </Link>
+            </li>
+            <li className="header__item">
+              <Link href="./#aboutme" className="header__link" onClick={closeMenu}>
+                <span className="header__text">About</span>
+              </Link>
+            </li>
+            <li className="header__item">
+              <Link href="./#works" className="header__link" onClick={closeMenu}>
+                <span className="header__text">Works</span>
+              </Link>
+            </li>
+            <li className="header__item">
+              <Link href="./#contact" className="header__link" onClick={closeMenu}>
+                <span className="header__text">Contact</span>
+              </Link>
+            </li>
+            <li className="header__item">
+            <Link
+              href="https://www.linkedin.com/in/steven-hsu-b7a705289/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm nav-icon"
+            >
+              <img
+                src="/LI-In-Bug.png"
+                alt="linkedin"
+                className="h-5 w-6 filter"
+              />
+            </Link>
+            </li>
+            <li className="header__item">
+            <Link
+              href="https://github.com/StevenHsu22"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm nav-icon"
+            >
+              <img
+                src={`/github-mark-${navClass}.svg`}
+                alt="GitHub"
+                className="h-6 w-6 filter hue-rotate-90"
+              />
+            </Link>
+            </li>
+          </ol>
+          
+          
+        </nav>
+
+
+
+      <div className="flex space-x-8 ml-auto hidden md:flex">
+        <Link
+          href="https://www.linkedin.com/in/steven-hsu-b7a705289/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm nav-item"
+          style={{
+            padding: "3px 0 0 0"
+          }}
+        >
+          <img
+            src="/LI-In-Bug.png"
+            alt="linkedin"
+            className="h-5 w-6 filter"
+          />
+        </Link>
+        <Link
+          href="https://github.com/StevenHsu22"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm nav-item"
+        >
+          <img
+            src={`/github-mark-${navClass}.svg`}
+            alt="GitHub"
+            className="h-6 w-6 filter hue-rotate-90"
+          />
+        </Link>
+        <Link className="text-sm nav-item" href="./#home">
+          HOME
+        </Link>
+        <Link className="text-sm nav-item" href="./#aboutme">
+          ABOUTME
+        </Link>
+        <Link className="text-sm nav-item" href="./#works">
+          WORKS
+        </Link>
+        <Link className="text-sm nav-item" href="./#contact">
+          CONTACT
+        </Link>
       </div>
-    </nav>
+
+      </nav>
+
+      
+    </div>
   );
 }

@@ -10,14 +10,11 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <div className="flex flex-col h-screen">
-          {/* 水平導航欄 */}
-          <header className="w-full">
+          <header>
             <SideNav />
           </header>
-          {/* 主內容區域 */}
-          <main className="flex-grow p-6 md:overflow-y-auto md:p-12">
+          <main className="main-wrapper">
             {children}
-            <div style={{ height: '2000px' }}></div>
           </main>
         </div>
       </body>
