@@ -99,7 +99,7 @@ export default function SideNav() {
           href="https://www.linkedin.com/in/steven-hsu-b7a705289/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sm nav-item"
+          className="text-sm menu-nav-item"
           style={{
             padding: "3px 0 0 0"
           }}
@@ -114,7 +114,7 @@ export default function SideNav() {
           href="https://github.com/StevenHsu22"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sm nav-item"
+          className="text-sm menu-nav-item"
         >
           <img
             src={`/github-mark-${navClass}.svg`}
@@ -122,16 +122,16 @@ export default function SideNav() {
             className="h-6 w-6 filter hue-rotate-90"
           />
         </Link>
-        <Link className="text-sm nav-item" href="./#home">
+        <Link className="text-sm menu-nav-item" href="./#home">
           HOME
         </Link>
-        <Link className="text-sm nav-item" href="./#aboutme">
+        <Link className="text-sm menu-nav-item" href="./#aboutme">
           ABOUTME
         </Link>
-        <Link className="text-sm nav-item" href="./#works">
+        <Link className="text-sm menu-nav-item" href="./#works">
           WORKS
         </Link>
-        <Link className="text-sm nav-item" href="./#contact">
+        <Link className="text-sm menu-nav-item" href="./#contact">
           CONTACT
         </Link>
       </div>

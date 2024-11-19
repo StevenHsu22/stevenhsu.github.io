@@ -467,30 +467,32 @@ export default function PageContent() {
           <a href="mailto:stevenhsu@keio.jp">
             stevenhsu@keio.jp
           </a>
-          <Link
-            href="https://github.com/StevenHsu22"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white text-sm nav-item"
-          >
-            <img
-              src="/github-mark-text-white.svg"
-              alt="GitHub"
-              className="h-8 w-8 filter hue-rotate-90"
-            />
-          </Link>
-          <Link
-            href="https://www.linkedin.com/in/steven-hsu-b7a705289/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm nav-item"
-          >
-            <img
-              src="/LI-In-Bug.png"
-              alt="linkedin"
-              className="h-8 w-10 filter"
-            />
-          </Link>
+          <div className="nav-items">
+            <Link
+              href="https://github.com/StevenHsu22"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white text-sm nav-item"
+            >
+              <img
+                src="/github-mark-text-white.svg"
+                alt="GitHub"
+                className="h-8 w-8 filter hue-rotate-90"
+              />
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/steven-hsu-b7a705289/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm nav-item"
+            >
+              <img
+                src="/LI-In-Bug.png"
+                alt="linkedin"
+                className="h-8 w-10 filter"
+              />
+            </Link>
+          </div>
         </div>
         <div className="image_over_wrapper">
           <div className="image_over">

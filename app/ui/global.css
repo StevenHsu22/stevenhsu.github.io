@@ -195,13 +195,16 @@ p {
 /* contact_info */
 
 .contact_info {
+  display: flex;
   position: absolute; 
-  top: 52%; 
+  flex-direction: column;
+  top: 48%; 
   left: 10%;
   font-size: 1.5rem; 
   color: white;
-  line-height: 3.0; 
+  line-height: 2.0; 
   z-index: 2; 
+  gap: 10px;
 }
 
 .contact_info span {
@@ -211,13 +214,15 @@ p {
   letter-spacing: 5px;
 }
 
-.contact_info .nav-item {
-  position: relative;  
-  top: 20%;  
-  left: -50%;
-  display: inline-block;  
-  vertical-align: middle; 
-  padding: 10px;
+.contact_info .nav-items .nav-item {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.contact_info .nav-items {
+  display: flex;
+  gap: 20px;
 }
 
 .contact_name span {
@@ -243,13 +248,16 @@ p {
 @media screen and (max-width: 768px) {
 
   .contact_info {
+    display: flex;
     position: absolute; 
-    top: 50%; 
+    flex-direction: column;
+    top: 48%; 
     left: 10%;
     font-size: 1.5rem; 
     color: white;
-    line-height: 3.0; 
+    line-height: 2.0; 
     z-index: 2; 
+    gap: 10px;
   }
   
   .contact_info span {
@@ -259,13 +267,15 @@ p {
     letter-spacing: 5px;
   }
   
-  .contact_info .nav-item {
-    position: relative;  
-    top: 20;  
-    left: -50%;
-    display: inline-block;  
-    vertical-align: middle; 
-    padding: 10px;
+  .contact_info .nav-items .nav-item {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .contact_info .nav-items {
+    display: flex;
+    gap: 20px;
   }
 
   .contact_name {
@@ -490,7 +500,7 @@ p {
   }
 }
 
-.nav-item {
+.menu-nav-item {
   transform: translate(-60px, 20px);
   letter-spacing: 3px;
 }
