@@ -86,52 +86,18 @@ export default function Page() {
           </button>
 
           <div className="timeline" ref={scrollContainer}>
-            <div className="timeline-event" ref={timelineEventRef}>
-              <p className="event-date">2016.09 ~ 2020.06</p>
-              <div className="event-content">
-                <h3>台北市立大学</h3>
-                <p>都市產業管理とマーケティング学科</p>
-                <p className='event-description'>
-                1.市場調査 - 産業調査、競合他社分析<br />
-                2.報告作成 - 企画書の作成、プレゼンテーションスキル<br />
-                3.ブランドマーケティング<br />
-                4.チームワーク
-                </p>
-              </div>
-            </div>
 
-            <div className="timeline-event" ref={timelineEventRef}>
-              <p className="event-date">2021.05 ~ 2021.11</p>
+            <div className="timeline-event" ref={timelineEventRef}> 
+              <p className="event-date">2024.10 ~ 2025.8</p>
               <div className="event-content">
-                <h3>eLAND インフォメーション</h3>
-                <p>コミュニティデータアナリスト</p>
+                <h3>慶應義塾大学</h3>
+                <p>別科・日本語研修課程</p>
                 <p className='event-description'>
-                1.分析レポートを 20 件実行<br />
-                2.多業界レポート<br />
-                3.クライアント管理<br />
-                4.クライアントに戦略的方向性を提供<br />
-                5.教育トレーニング最適化
-                </p>
-              </div>
-            </div>
-
-            <div className="timeline-event" ref={timelineEventRef}>
-              <p className="event-date">2022.03 ~ 2022.08</p>
-              <div className="event-content">
-                <h3>AI データ人材養成コース</h3>
-                <p>インターン</p>
-                <p className='event-description'>
-                1.Pythonを使用して関連データをスクレイピングする<br />
-                2.SQLデータベースの構築と利用<br />
-                3.APIの連携、およびデータの可視化<br />
-                4.プロジェクトの推進を支援します<br />
-                <span style={{
-                    fontSize: "12px",
-                    color: "#aaa5a5",
-                    padding: "10px 0 0 0",
-                    display: "inline-block",
-                  }}>#Python #Linux #Tableau #ELK #Grafana #MySQL
-                </span>
+                1.日本の技術と文化を理解する<br />
+                2.日本の技術コミュニティや開発コミュニティに参加する<br />
+                3.個人の競争力と語学スキルを向上させる<br />
+                4.KCS（慶應義塾大学のコンピュータサークル）に所属し、Web班の一員として活動<br />
+                5.2025年3月、Progateハッカソンに参加し、AWS賞を受賞<br />
                 </p>
               </div>
             </div>
@@ -166,15 +132,52 @@ export default function Page() {
               </div>
             </div>
 
-            <div className="timeline-event" ref={timelineEventRef}> 
-              <p className="event-date">2024.09 ~ now</p>
+            <div className="timeline-event" ref={timelineEventRef}>
+              <p className="event-date">2022.03 ~ 2022.08</p>
               <div className="event-content">
-                <h3>慶應義塾大学</h3>
-                <p>別科・日本語研修課程</p>
+                <h3>AI データ人材養成コース</h3>
+                <p>インターン</p>
                 <p className='event-description'>
-                1.日本の技術と文化を理解する<br />
-                2.日本の技術コミュニティや開発コミュニティに参加する<br />
-                3.個人の競争力と語学スキルを向上させる<br />
+                1.Pythonを使用して関連データをスクレイピングする<br />
+                2.SQLデータベースの構築と利用<br />
+                3.APIの連携、およびデータの可視化<br />
+                4.プロジェクトの推進を支援します<br />
+                <span style={{
+                    fontSize: "12px",
+                    color: "#aaa5a5",
+                    padding: "10px 0 0 0",
+                    display: "inline-block",
+                  }}>#Python #Linux #Tableau #ELK #Grafana #MySQL
+                </span>
+                </p>
+              </div>
+            </div>
+
+            <div className="timeline-event" ref={timelineEventRef}>
+              <p className="event-date">2021.05 ~ 2021.11</p>
+              <div className="event-content">
+                <h3>eLAND インフォメーション</h3>
+                <p>コミュニティデータアナリスト</p>
+                <p className='event-description'>
+                1.分析レポートを 20 件実行<br />
+                2.多業界レポート<br />
+                3.クライアント管理<br />
+                4.クライアントに戦略的方向性を提供<br />
+                5.教育トレーニング最適化
+                </p>
+              </div>
+            </div>
+
+            <div className="timeline-event" ref={timelineEventRef}>
+              <p className="event-date">2016.09 ~ 2020.06</p>
+              <div className="event-content">
+                <h3>台北市立大学</h3>
+                <p>都市產業管理とマーケティング学科</p>
+                <p className='event-description'>
+                1.市場調査 - 産業調査、競合他社分析<br />
+                2.報告作成 - 企画書の作成、プレゼンテーションスキル<br />
+                3.ブランドマーケティング<br />
+                4.チームワーク
                 </p>
               </div>
             </div>

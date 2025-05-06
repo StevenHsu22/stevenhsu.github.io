@@ -21,7 +21,18 @@ export default function PageContent() {
 
   useEffect(() => {
 
-    document.body.style.transition = 'background-image 0.5s ease';
+    const preloadImages = [
+      "/background_app2.svg",
+      "/background2.svg"
+    ];
+  
+    preloadImages.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+    
+    document.body.style.transition = 'background-image 0.5s ease-in-out, background-color 0.5s ease-in-out';
+    document.body.style.backgroundColor = '#f0f0f0';
     document.body.style.backgroundImage = "url('/background.svg')";
     initializeAnimations();
 
@@ -356,6 +367,63 @@ export default function PageContent() {
             <SwiperSlide>
               <div className="slide-work-content">
                 <Link
+                  href="https://github.com/StevenHsu22/AI-Chatbot-LINE"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="/works_image/ai_chat_bot.jpg" 
+                    alt="AI Chatbot with LINE" 
+                    className="slide-work-image"
+                  />
+                </Link>
+                <div className="slide-work-text-content">
+                  <p className="slide-work-category">Project</p>
+                  <h3 className="slide-work-title">AI Chatbot with LINE</h3>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="slide-work-content">
+                <Link
+                  href="https://topaz.dev/projects/fe7d3c5c2705dd89510b"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="/works_image/hackathon.png" 
+                    alt="ProgateHack Hackathon" 
+                    className="slide-work-image"
+                  />
+                </Link>
+                <div className="slide-work-text-content">
+                  <p className="slide-work-category">Project</p>
+                  <h3 className="slide-work-title">ProgateHack Hackathon</h3>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="slide-work-content">
+                <Link
+                  href="https://github.com/StevenHsu22/Chinese_Sentiment"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="/works_image/sentiment_analysis.jpeg" 
+                    alt="Chinese Sentiment Analysis Model" 
+                    className="slide-work-image"
+                  />
+                </Link>
+                <div className="slide-work-text-content">
+                  <p className="slide-work-category">Experiment</p>
+                  <h3 className="slide-work-title">Chinese Sentiment Analysis Model</h3>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="slide-work-content">
+                <Link
                   href="https://github.com/StevenHsu22/API_shoppingcart"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -464,8 +532,8 @@ export default function PageContent() {
           </div>
         </div>
         <div className="contact_info">
-          <a href="mailto:stevenhsu@keio.jp">
-            stevenhsu@keio.jp
+          <a href="mailto:a88240108@gmail.com">
+            a88240108@gmail.com
           </a>
           <div className="nav-items">
             <Link
