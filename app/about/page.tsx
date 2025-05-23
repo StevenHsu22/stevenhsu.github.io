@@ -253,7 +253,7 @@ export default function Page() {
             </tr>
             <tr>
               <td>Languages</td>
-              <td>Mandarin Chinese (Native), English (Business, TOEIC 860), Japanese (Basic, N2)</td>
+              <td>Mandarin Chinese (Native), English (Conversational, TOEIC 860), Japanese (Conversational, N2)</td>
             </tr>
           </tbody>
         </table>
