@@ -275,3 +275,23 @@
 .event-portfolio-btn:hover {
   background-color: #323c4b; 
 }
+
+
+.note-container {
+  width: 90%;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  font-size: 0.9rem;
+  color: #333;
+  text-align: left;
+}
+
+.note-container p {
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+.note-container ul {
+  margin-top: 0;
+  padding-left: 1.2rem;
+}

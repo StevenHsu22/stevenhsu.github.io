@@ -198,65 +198,88 @@ export default function Page() {
           <thead>
             <tr style={{ backgroundColor: 'gray' }}>
               <th>Category</th>
-              <th>Technology Stack</th>
+              <th>Experienced</th>
+              <th>Familiar</th>
+              <th>Personal Projects</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td rowSpan={4}>Programming Languages/ Library etc.</td>
-              <td className="merged-cell">Web Frontend：HTML, CSS, JavaScript, TypeScript, Next.js</td>
+              <td>Programming Languages</td>
+              <td>Python</td>
+              <td>HTML, CSS, JavaScript</td>
+              <td>TypeScript</td>
             </tr>
             <tr>
-              <td className="merged-cell">Backend：Python, Next.js</td>
-            </tr>
-            <tr>
-              <td className="merged-cell">DataPlatform：Python</td>
-            </tr>
-            <tr>
-              <td className="merged-cell">Python Framework：Flask, FastAPI, LangChain</td>
-            </tr>
-            <tr>
-              <td>Infrastructure</td>
-              <td>Google Cloud Platform, Amazon Web Services</td>
+              <td>Frameworks</td>
+              <td>Flask, FastAPI</td>
+              <td>-</td>
+              <td>Next.js, React</td>
             </tr>
             <tr>
               <td>Database</td>
-              <td>Elasticsearch, MySQL, MongoDB, Redis, Neo4j, Amazon S3</td>
+              <td>Elasticsearch, MySQL</td>
+              <td>MongoDB, Redis, Amazon S3</td>
+              <td>Neo4j</td>
             </tr>
             <tr>
-              <td>Monitoring</td>
-              <td>Kibana</td>
+              <td>Infrastructure / Cloud</td>
+              <td>-</td>
+              <td>GCP, AWS, Azure</td>
+              <td>-</td>
             </tr>
             <tr>
-              <td>Environment setup</td>
-              <td>Docker, Docker compose</td>
+              <td>Machine Learning</td>
+              <td>-</td>
+              <td>scikit-learn, TensorFlow, PyTorch</td>
+              <td>-</td>
             </tr>
             <tr>
-              <td>Machine learning Library</td>
-              <td>scikit-learn, TensorFlow, PyTorch, PyTorch Lightning, Python</td>
+              <td>AI Tools</td>
+              <td>StableDiffusion</td>
+              <td>LangChain, Langflow, Prompt engineering</td>
+              <td>Dify</td>
             </tr>
             <tr>
               <td>Search Engine</td>
               <td>Elasticsearch</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Analytics / Monitoring Tools</td>
+              <td>Kibana</td>
+              <td>GA4</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Dev Environment</td>
+              <td>Docker, Docker Compose</td>
+              <td>-</td>
+              <td>-</td>
             </tr>
             <tr>
               <td>Code Management</td>
-              <td>GitHub, GitLab</td>
+              <td>GitLab</td>
+              <td>-</td>
+              <td>GitHub</td>
             </tr>
             <tr>
-              <td>Test automation tools</td>
+              <td>Testing Tools</td>
               <td>Postman</td>
-            </tr>
-            <tr>
-              <td>Others</td>
-              <td>LLM, Prompt engineering, StableDiffusion, GA4</td>
-            </tr>
-            <tr>
-              <td>Languages</td>
-              <td>Mandarin Chinese (Native), English (Conversational, TOEIC 860), Japanese (Conversational, N2)</td>
+              <td>-</td>
+              <td>-</td>
             </tr>
           </tbody>
         </table>
+        <div className="note-container">
+          備考：
+          <ul>
+            <li><strong>Experienced</strong>：実務で頻繁に使用</li>
+            <li><strong>Familiar</strong>：実務で触れたことがあり、基本的な理解と簡単な実装経験はある</li>
+            <li><strong>Personal Projects</strong>：自学またはサイドプロジェクトで使用経験ある</li>
+          </ul>
+        </div>
       </section>
 
     </div>
